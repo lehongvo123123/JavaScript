@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="" id="do_something" >
+         <option value="Mon">Mon</option>
+         <option value="Dad">Dad</option>
+         <option value="Young sister">Young sister</option>
+         <option value="Old sister">old sister</option>
+         <option value="Brother">brother</option>
+    </select>
+</body>
+<script>
+    var dddd=document.getElementById("do_something")
+    dddd.addEventListener("change",my_select)
+    function my_select(){
+    ffff=document.getElementById("do_something").value;
+        alert("i love my "+ffff)
+    }
+</script>
+</html>
