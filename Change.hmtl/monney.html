@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Amount</label>
+    <input type="text" maxlength="20" id="fff">
+    <h1 id="sss">result</h1>
+    <button id="ddd">Click</button>
+</body>
+<script>
+    var x=document.getElementById("fff");
+    var d=document.getElementById("ddd");
+    var s=document.getElementById("sss");
+     var onClick=function(){
+         s.textContent=x;
+     }
+     d.addEventListener("click",onClick);
+</script>
+</html>
