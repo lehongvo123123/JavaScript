@@ -6,18 +6,24 @@
     <title>Document</title>
 </head>
 <body>
-    <select name="" id="do"  onclick="setll()">
+    <select name="" id="do">
         <option value="Dad">Dad</option>
         <option value="Mon">Mon</option>
         <option value="Young sister">Young sister</option>
         <option value="Old Sister"> Old sister</option>
         <option value="Girl Fiend">Girl friend</option>
-    </select>
+    </select> 
+    <h1 id="do1"></h1>
+     <button id="do1"> Click hear</button>
 </body>
 <script>
-    function setll(){
-        var kkk=document.getElementById("do").value;
-        alert("i love my:" + kkk)
+    var kkk=document.getElementById("do");
+      kkk.addEventListener("change",my_select)
+    var function onclick() {
+     function  my_select(){
+        kkkk=document.getElementById("do").value;
+        alert("i love my "+kkkk);
     }
+}
 </script>
 </html>
