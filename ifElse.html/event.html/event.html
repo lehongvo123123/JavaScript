@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Click the button to display the date.</h1>
+    <button id="button">What time is it?</button>
+    <div id="demo"></div>
+
+</body>
+<script>
+    var clock=document.getElementById("demo");
+    var button=document.getElementById("button");
+     var onClick=function(){
+         clock.textContent=Date();
+     }
+     button.addEventListener("click",onClick)
+
+</script>
+</html>
