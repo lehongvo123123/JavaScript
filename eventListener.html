@@ -6,18 +6,46 @@
     <title>Document</title>
 </head>
 <body>
-    <select name="" id="do"  onclick="setll()">
-        <option value="Dad">Dad</option>
-        <option value="Mon">Mon</option>
-        <option value="Young sister">Young sister</option>
-        <option value="Old Sister"> Old sister</option>
-        <option value="Girl Fiend">Girl friend</option>
-    </select>
+    <form name="tinh">
+    <p id="color">How much :</p>
+    <input type="text" name="toan" id="iiii" value="Fill value"> <br>
+    <p id="color1">From : </p>
+    <select name="" id="do">
+        <option value="1">Vietnam</option>
+        <option value="2">Korean</option>
+        <option value="3">Thailan</option>
+        <option value="4"> Japan</option>
+        <option value="5">Campuchia</option>
+    </select> <br>
+    <p id="color2">To :</p>
+    <select name="" id="do1">
+        <option value="0.0000431386">Dolas</option>
+        <option value="0.000036">Euro</option>
+        <option value="0.0013">Thái</option>
+        <option value=" 0.00018"> Malasia</option>
+        <option value="0.000059"> Úc</option>
+        <option value="0.000058">Singapore</option>
+        <option value="0.0045">Yên Nhật</option>
+        <option value="0.00029">China</option>
+        <option value="0.00033">Hongkong</option>
+        <option value="0.6132">Indonesia</option>
+    </select> <br>
+    <h1 id="name">Result </h1>
+    <input id="name2" type="button" value="click">
+    </form>
 </body>
 <script>
-    function setll(){
-        var kkk=document.getElementById("do").value;
-        alert("i love my:" + kkk)
-    }
+       var jjj2=document.getElementById("name");
+    var jjj4=document.getElementById("name2");
+   var onClick=function(){
+       var kkk=document.getElementById("do").value;
+       var kkk1=document.getElementById("do1").value;
+       var iii=document.getElementById("iiii").value;
+         jjj2.textContent=kkk*kkk1*iii;
+   }
+   
+   jjj4.addEventListener("click",onClick)
+
+
 </script>
 </html>
