@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcalator BIM</title>
+    <style>
+        body{
+           border:3px solid rgb(142, 226, 73);
+           border-radius: 20px;
+           width:340px;
+           height:420px;
+           position: relative;
+           left:450px;
+           top:100px;
+          
+        }
+        div{
+            position: relative;
+             top:-10px;
+            background-image: url("https://cdn.pixabay.com/photo/2019/12/07/19/20/city-4679928__340.png");
+        }
+        #width_body{
+            width:310px;
+            height:40px;
+            border:3px solid red ;
+            border-radius: 10px;
+            font-size: 40px;
+            font-family: cursive;
+            position: relative;
+            background:rgb(231, 184, 184);
+          
+        }
+        #Height_body{
+            width:310px;
+            height:40px;
+            border:3px solid red ;
+            border-radius: 10px;
+            font-size: 40px;
+            font-family: cursive;
+            background:rgb(231, 184, 184);
+        }
+        #weight{
+            font-size: 20px;
+            font-weight: bold;
+            font-family:cursive;
+        }
+        #height{
+            font-size: 20px;
+            font-weight: bold;
+            font-family:cursive;
+        }
+        #Result{
+            font-size: 40px;
+            font-weight: bold;
+            font-family:cursive;
+            position:relative;
+            left:90px;
+
+        }
+        #button{
+            width:150px;
+            height:50px;
+            border-radius: 40px;
+            border: 3px solid black;
+            background:yellow;
+            font-size: 28px;
+            font-family: cursive;
+        }
+        #reset{
+            width:150px;
+            height:50px;
+            border-radius: 40px;
+            background:yellow;
+            font-size: 28px;
+            font-family: cursive;
+            border: 3px solid black;
+        }
+        
+        
+    </style>
+</head>
+<body> 
+    <div>
+    <form action="">
+    <p id="weight">Width(Weight 70Kg Writing 70)</p>
+    <input type="text" id="width_body" > <br>
+    <p id="height">Height(Height 150cm Writing 1.5) </p>
+    <input type="text" id="Height_body"> <br>
+     <p id="Result">Result</p>
+      <input type="button" id="button" value="button">
+     <input type="reset" value="reset" id="reset">
+    </form>
+    </div>
+</body>
+<script>
+    var Result_treament=document.getElementById("Result");
+    var button=document.getElementById("button");
+    var Research=function(){
+    var BMI;
+    var width_body=document.getElementById("width_body").value;
+    var Height_body=document.getElementById("Height_body").value;
+         BMI=width_body/(Height_body*Height_body);
+           if(BMI<18.5){
+            Result_treament.textContent="UnderWeight"
+           } else{
+               if(BMI>=18.5 && BMI<25.0){
+                Result_treament.textContent="UnderWeight"
+               }else{
+                if(BMI>=25 && BMI<30){
+                    Result_treament.textContent="Overweight"
+                } else{
+                    if(BMI>=30){
+                        Result_treament.textContent="Obese"
+                    }
+                }
+               }
+           } 
+
+           
+    }
+    button.addEventListener("click",Research)
+</script>
+</html>
