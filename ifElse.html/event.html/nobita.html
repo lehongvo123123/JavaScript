@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #ball{
+           position: relative;
+           width:100px;
+           height:100px 
+        }
+    </style>
+</head>
+<body>
+ <img id="ball" src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Basketball.png" alt="">
+</body>
+<script> 
+     var ball_move=document.getElementById("ball");
+     ball_move.style.left="100px";
+     ball_move.style.top="100px";
+     //-----------------------------function(1)-----------------------------
+     var up_ball=function(){
+        ball_move.style.top=(parseFloat(ball_move.style.top)-20)+"px";
+     }
+     var down_ball=function(){
+        ball_move.style.top=(parseFloat(ball_move.style.top)+20)+"px";
+     }
+     var left_ball=function(){
+        ball_move.style.left=(parseFloat(ball_move.style.left)-20)+"px";
+     }
+     var right_ball=function(){
+        ball_move.style.left=(parseFloat(ball_move.style.left)+20)+"px";
+     }
+     
+     //-----------------------------function(2)-----------------------------
+     var move_ball=function(evt){
+         switch(evt.keyCode){
+             case 38:
+             up_ball();
+             break;
+             case 40:
+             down_ball();
+             break;
+             case 37:
+             left_ball();
+             break;
+             case 39:
+             right_ball();
+             break;
+         }
+     }
+     //-----------------------------function(3)-----------------------------
+     var run=function(){
+          window.addEventListener("keydown",move_ball)
+     }
+     run();
+     //-----------------------------function(4)-----------------------------
+
+</script>
+</html>

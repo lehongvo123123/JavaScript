@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         #element_1{
+             position:absolute;
+             left:0;
+             top:0;
+             height:100px;
+             width: 80px;
+         }
+    </style>
+</head>
+<body> 
+<img id="element_1" src="https://upload.wikimedia.org/wikipedia/vi/f/f7/Nobita001.png"/>
+</body>
+<script>
+    var element = document.getElementById("element_1");
+    element.style.top="100px";
+    element.style.left="100px";
+
+    //-----------------function1--------------------------------------
+    var downAnimation=function(){
+         element.style.top = (parseInt(element.style.top) + 10) + 'px';
+    }
+    var upAnimation=function(){
+         element.style.top = (parseInt(element.style.top) - 10) + 'px';
+    }
+    var rightAnimation=function(){
+         element.style.left = (parseInt(element.style.left) + 10) + 'px';
+    }
+    var leftAnimation=function(){
+         element.style.left = (parseInt(element.style.left) - 10) + 'px';
+    }
+    //-----------------function2--------------------------------------
+    var moveSelection=function(evt){
+        switch(evt.keyCode){
+            case 40:
+            downAnimation();
+            break;
+            case 38:
+            upAnimation()
+               break;
+            case 39:
+            rightAnimation();
+               break;
+            case 37:
+            leftAnimation ();
+            break; 
+        }
+    }
+    var docReady=function(){
+        window.addEventListener("keydown",moveSelection)
+    }
+  docReady();
+    //-----------------function1--------------------------------------
+  
+  
+</script>
+</html>
