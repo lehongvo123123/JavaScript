@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       #text{
+        text-align: end;
+       }
+    </style>
+</head>
+<body>
+      <form action="" name="ex">
+     <tr>
+         <td>
+            <input type="text" name="tinh" id="text">
+         </td> <br>
+     </tr>
+     <tr>
+         <td>
+          <input type="button" value ="1" onclick="ex.tinh.value+=1">
+          <input type="button" value ="2"  onclick="ex.tinh.value+=2"> 
+          <input type="button" value ="3" onclick="ex.tinh.value+=3">  
+          <input type="button" value ="+" onclick="ex.tinh.value+='+'">
+         </td> <br>
+         <td>
+            <input type="button" value ="4"  onclick="ex.tinh.value+=1">
+            <input type="button" value ="5"  onclick="ex.tinh.value+=2"> 
+            <input type="button" value ="6" name="toan" onclick="ex.tinh.value+=6">
+            <input type="button" value ="-" onclick="ex.tinh.value-='-'">
+           </td> <br>
+           <td>
+            <input type="button" value ="7"  onclick="ex.tinh.value+=1">
+            <input type="button" value ="8"  onclick="ex.tinh.value+=2"> 
+            <input type="button" value ="9" name="toan" onclick="ex.tinh.value+=6">
+            <input type="button" value ="x" onclick="ex.tinh.value=ex.tinh.value*ex.tinh.value">
+           </td>   <br>
+           <td>
+            <input type="reset" value ="C"  >
+            <input type="button" value ="0"  onclick="ex.tinh.value+=0"> 
+            <input type="button" value ="=" name="toan" onclick="ex.tinh.value=eval(ex.tinh.value)">
+            <input type="button" value ="/" onclick="ex.tinh.value+='/'">
+           </td>   <br>
+     </tr>
+    </form>
+</body>
+
+</html>

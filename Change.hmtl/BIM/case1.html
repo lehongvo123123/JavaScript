@@ -56,19 +56,20 @@
     </style>
 </head>
 <body>
-   <form>
+  
         <div>
             <input type="text" id="inputMonth">
             <button id="button" onclick="countDay()">Count Day</button>
             <p id="day">Hello world</p>
-            <!-- <input type="reset" id="reset"> -->
+            <input type="reset" id="reset"> 
         </div>
-    </form>
+    
 </body>
 <script>
     var reset=document.getElementById("reset")
     var button=document.getElementById("button");
     var day=document.getElementById("day");
+    var inputMonth=document.getElementById("inputMonth");
     function countDay(){
         var inputMonth=document.getElementById("inputMonth").value;
              switch(inputMonth){
@@ -114,6 +115,11 @@
              }
         
     }
-    // button.addEventListener("click",onclick);
+    var onclick1=function(){
+        day.textContent="Hello world"
+        inputMonth.textContent="jj";
+    }
+    reset.addEventListener("click",onclick1);
+    
 </script>
 </html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            position: relative;
+            left:400px;
+            top:200px;
+        }
+        div{
+            width: 400px;
+            height: 150px;
+            border:3px solid black;
+            background-image: url("https://cdn.pixabay.com/photo/2020/11/04/19/22/windmill-5713337__340.jpg");
+        }
+        #inputMouth{
+            width:200px;
+            font-size: 40px;
+            height:30px;
+            background:rgb(211, 191, 194);
+            color: black;
+            position: relative;
+            top:20px;
+            left:10px;
+            border: 2px solid red;
+            text-align: center;
+
+        }
+        #button{
+            width:150px;
+            font-size: 26px;
+            height:30px;
+            background:rgb(194, 23, 46);
+            color: rgb(8, 7, 7);
+            position: relative;
+            top:15px;
+            left:20px;
+            height:50px;
+            border: 2px solid red;
+        }
+        #day{
+            text-align: center;
+            font-size: 30px;
+            font-family: cursive;
+            text-decoration: underline;
+            color: yellow;
+        }
+        #reset{
+        position:relative;
+        top:40px;
+        left:180px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <input type="text" id="inputMouth">
+     <button id="button" >Count Day</button>
+     <p id="day"></p>
+    
+     </div>
+    
+</body>
+<script>
+    var button=document.getElementById("button");
+    var day=document.getElementById("day");
+    var inputMouth=document.getElementById("inputMouth");
+    //-----------------------------------------------
+    var onClick1=function(){
+            day.textContent="Tháng 1 có 31 ngày";
+    }
+  
+    //-------------------------------------------------
+    var onClick2=function(){
+            day.textContent="Tháng 2 có 28 or 29 ngày";
+    }
+   
+    //-------------------------------------------------
+    var onClick3=function(){
+            day.textContent="Tháng 3 có 31 ngày";
+    }
+    
+    //-------------------------------------------------
+    var onClick4=function(){
+            day.textContent="Tháng 4 có 30 ngày";
+    }
+  
+    //--------------------------------------------------//-------------------------------------------------
+    var onClick5=function(){
+            day.textContent="Tháng 5 có 31 ngày";
+    }
+    
+    //--------------------------------------------------//-------------------------------------------------
+    var onClick6=function(){
+            day.textContent="Tháng 6 có 30 ngày";
+    }
+   
+    //--------------------------------------------------//-------------------------------------------------
+    var onClick7=function(){
+            day.textContent="Tháng 7 có 31 ngày";
+    }
+   
+    //--------------------------------------------------//-------------------------------------------------
+    var onClick8=function(){
+            day.textContent="Tháng 8 có 31 ngày";
+    }
+   
+    //--------------------------------------------------//-------------------------------------------------
+    var onClick9=function(){
+            day.textContent="Tháng 9 có 30ngày";
+    }
+
+    //--------------------------------------------------//-------------------------------------------------
+    var onClick10=function(){
+            day.textContent="Tháng 10 có 31 ngày";
+    }
+   
+    //--------------------------------------------------//-------------------------------------------------
+    var onClick11=function(){
+            day.textContent="Tháng 11 có 30 ngày";
+    }
+ 
+    //--------------------------------------------------//-------------------------------------------------
+    var onClick12=function(){
+            day.textContent="Tháng 12 có 31 ngày";
+    }
+ 
+    //--------------------------------------------------
+    //--------------------------------------------------
+    //--------------------------------------------------
+var  clickAll=function(){ 
+    switch (inputMouth){
+        case 1:
+        onClick1();
+        break;
+        case 2:
+        onClick2();
+        break;
+        case 3:
+        onClick3();
+        break;
+        case 4:
+        onClick4();
+        break;
+        case 5:
+        onClick5();
+        break;
+        case 6:
+        onClick6();
+        break;
+        case 7:
+        onClick7();
+        break;
+        case 8:
+        onClick8();
+        break;
+        case 9:
+        onClick9();
+        break;
+        case 10:
+        onClick10();
+        break;
+        case 11:
+        onClick11();
+        break;
+        case 12:
+        onClick12();
+        break;
+    }
+}
+var run=function(){
+    button.addEventListener("click",clickAll)
+}
+run();
+</script>
+</html>
