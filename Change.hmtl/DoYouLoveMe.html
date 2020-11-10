@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+
+        }
+        #main{
+            text-align: center;
+            text-decoration: underline;
+            font-size: 40px;
+            font-family: cursive;
+            position: relative;
+            top:200px;
+        }
+        #yesButton{
+            width: 80px;
+            height: 50px;
+            font-size: 30px;
+            border:3px solid blue ;
+            border-radius: 20px;
+            background:pink;
+            position: relative;
+            left:550px;
+            top:200px;
+        }
+        #noButton{
+            width: 80px;
+            height: 50px;
+            font-size: 30px;
+            border:3px solid blue ;
+            border-radius: 20px;
+            background:chartreuse;
+            position: relative;
+            left:550px;
+            top:200px;
+        }
+        
+        </style>
+</head>
+<body>
+     <h1 id="main">Do you love me?</h1>
+     <button id="yesButton">Yes</button>
+     <button id="noButton">No</button>
+</body>
+<script>
+    var  yesButton=document.getElementById("yesButton");
+     //-------when click yes--------------------------
+     var onClickYes=function(){
+         alert("You so cood")
+     }
+     yesButton.addEventListener("click",onClickYes);
+     //------When click yes --------------------------
+     var noButton=document.getElementById("noButton")
+         noButton.style.position="relative";
+   
+    
+    //function move no box when touch box//
+    var onClickNo=function(){
+        var a=(Math.round(Math.random()*window.innerWidth));
+     var b=(Math.round(Math.random()*window.innerHeight));
+        noButton.style.top=b+"px"; 
+        noButton.style.left=a+"px"; 
+        if(parseFloat(noButton.style.left)>=1200){
+            noButton.style.left="550px"
+        }
+        if(parseFloat(noButton.style.top)>=551){
+            noButton.style.top="200px"
+        }
+    }
+     noButton.addEventListener("mouseover",onClickNo)
+     
+</script>
+</html>
