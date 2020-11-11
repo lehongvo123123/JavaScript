@@ -41,17 +41,25 @@
    var Check_So=document.getElementById("Check_So");
    var onClick=function(){
          var first_Number1=parseInt(document.getElementById("first_Number").value);
-         var real_Number1=first_Number1*1650;
-                resutl.textContent=real_Number1+" Nghìn Đồng";
-                if(first_Number===""){
-                    resutl.textContent="Fill value a ,pls"
+
+               check();
+
+                if(first_Number1>0){
+                    var real_Number1=first_Number1*1650;
+                    resutl.textContent=real_Number1+" Nghìn Đồng";
                 }
+
                 if(first_Number1<0){
                     resutl.textContent="Wrong time"
                 }
-
-        
    } 
    Check_So.addEventListener("click",onClick)
+   //------------------------------------
+   var check=function(){
+    if(first_Number===""){
+     resutl.textContent="Please fill in value"
+     }
+                
+   }
 </script>
 </html>
