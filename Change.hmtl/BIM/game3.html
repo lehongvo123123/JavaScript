@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="variable1">5</h1>
+    <h1 id="variable2">6</h1>
+   
+    <img id="image1"src="https://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part1x1.jpg" alt="" width="300px" height="50px"> ; <br>
+    <img id="image2"src="https://demo.codegym.vn/8/puzzlegame/img/monkey_part2x1.jpg" alt="" width="300px" height="50px">; <br>
+    
+
+</body>
+<script>
+      var variable1=document.getElementById("variable1");
+      var image1=document.getElementById("image1");
+      var variable2=document.getElementById("variable2");
+      var image2=document.getElementById("image2");
+      //---------------------------------function1--------------------------------
+      var onClickNumber1=function(){
+        check();
+        variable1.textContent=parseFloat( variable1.textContent)+1;
+        if(parseFloat( variable1.textContent)==6){
+           image1.src="https://demo.codegym.vn/8/puzzlegame/img/monkey_part1x1.jpg";
+           return variable1.textContent;
+        }
+        if(parseFloat( variable1.textContent)==7){
+           image1.src="https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part1x1.jpg";
+           return variable1.textContent;
+        }
+        if(parseFloat( variable1.textContent)>7){
+            variable1.textContent=5
+            image1.src="https://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part1x1.jpg";
+            return variable21.textContent;
+        }
+       
+       
+      }
+      image1.addEventListener("click",onClickNumber1)
+      //----------------------------------function2-------------------------------------
+      var onClickNumber2=function(){
+        check();
+        variable2.textContent=parseFloat( variable2.textContent)+1;
+        if(parseFloat( variable2.textContent)==6){
+           image2.src="https://demo.codegym.vn/8/puzzlegame/img/monkey_part2x1.jpg"
+           return variable2.textContent;
+        }
+        if(parseFloat( variable2.textContent)==7){
+           image2.src="https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part2x1.jpg";
+           return variable2.textContent;
+           
+        }
+        if(parseFloat( variable2.textContent)>7){
+            variable2.textContent=5
+            image2.src="https://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part2x1.jpg";
+            return variable2.textContent;
+        }
+
+      }
+
+      image2.addEventListener("click",onClickNumber2)
+      //--------------------------------------checkOut2----------------------------------------
+      var check=function(){
+        if(parseFloat( variable2.textContent)===parseFloat( variable1.textContent) 
+        ){
+          image1.style.border="5px solid red";
+          image2.style.border="5px solid red";
+
+        } else{
+            image1.style.border="5px solid white";
+          image2.style.border="5px solid red";
+        }
+      }
+</script>
+</html>

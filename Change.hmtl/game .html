@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="variable1">5</h1>
+    <h1 id="variable2">6</h1>
+   
+    <img id="image1"src="https://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part1x1.jpg" alt="" width="300px" height="50px">; <br>
+    <img id="image2"src="https://demo.codegym.vn/8/puzzlegame/img/monkey_part2x1.jpg" alt="" width="300px" height="50px">; <br>
+    
+
+</body>
+<script>
+      var variable1=document.getElementById("variable1");
+      var image1=document.getElementById("image1");
+      var variable2=document.getElementById("variable2");
+      var image2=document.getElementById("image2");
+      var variable3=document.getElementById("variable3");
+      var image3=document.getElementById("image3");
+      var variable4=document.getElementById("variable4");
+      var image4=document.getElementById("image4");
+      var variable5=document.getElementById("variable5");
+      var image5=document.getElementById("image5");
+      //---------------------------------function1--------------------------------
+      var onClickNumber1=function(){
+        variable1.textContent=parseFloat( variable1.textContent)+1;
+        if(parseFloat( variable1.textContent)==6){
+           image1.src="https://demo.codegym.vn/8/puzzlegame/img/monkey_part1x1.jpg";
+           return variable1.textContent;
+        }
+        if(parseFloat( variable1.textContent)==7){
+           image1.src="https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part1x1.jpg";
+           return variable1.textContent;
+        }
+        if(parseFloat( variable1.textContent)>7){
+            variable1.textContent=5
+            image1.src="https://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part1x1.jpg";
+            return variable21.textContent;
+        }
+        
+      }
+      image1.addEventListener("click",onClickNumber1)
+      //----------------------------------function2--------------------------------------
+     
+      var onClickNumber2=function(){
+        variable2.textContent=parseFloat( variable2.textContent)+1;
+        if(parseFloat( variable2.textContent)==6){
+           image2.src="https://demo.codegym.vn/8/puzzlegame/img/monkey_part2x1.jpg"
+           return variable2.textContent;
+        }
+        if(parseFloat( variable2.textContent)==7){
+           image2.src="https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part2x1.jpg";
+           return variable2.textContent;
+           
+        }
+        if(parseFloat( variable2.textContent)>7){
+            variable2.textContent=5
+            image2.src="https://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part2x1.jpg";
+            return variable2.textContent;
+        }
+      }
+     //--------------------------------------------------------------------------------------------
+      //----------------------------------function3--------------------------------------
+  
+      var onClickNumber3=function(){
+         check();
+        variable3.textContent=parseFloat( variable3.textContent)+1;
+        if(parseFloat( variable3.textContent)==6){
+           image3.src="https://demo.codegym.vn/8/puzzlegame/img/monkey_part3x1.jpg";
+        }
+        if(parseFloat( variable3.textContent)==7){
+           image3.src="https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part3x1.jpg";
+        }
+        if(parseFloat( variable3.textContent)>7){
+            variable3.textContent=5
+            image3.src="https://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part3x1.jpg";
+        }
+        
+      }
+      image3.addEventListener("click",onClickNumber3)
+      //-------------------------------------------------------------------------------- 
+    //-----------------------------------------------------------------------------------------------  
+      image2.addEventListener("click",onClickNumber2)
+      var check=function(){
+        if(parseFloat( variable2.textContent)===parseFloat( variable1.textContent)){
+           alert("hello world")
+        }
+      }
+   
+</script>
+</html>
