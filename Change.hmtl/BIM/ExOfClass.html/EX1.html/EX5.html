@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        #Number_A{
+            width: 200px;
+            height: 50px;
+            font-size: 30px;
+            font-family:cursive;
+            border: 1px solid red;
+            background:yellowgreen;
+            border-radius: 30px;
+            position: relative;
+            left:550px;
+            text-align: center;
+        } 
+        #Number_B{
+            width: 200px;
+            height: 50px;
+            font-size: 30px;
+            font-family:cursive;
+            border: 1px solid red;
+            background:yellowgreen;
+            border-radius: 30px;
+            position: relative;
+            left:550px;
+            text-align: center;
+
+        }  
+        #Number_C{
+            width: 200px;
+            height: 50px;
+            font-size: 30px;
+            font-family:cursive;
+            border: 1px solid red;
+            background:yellowgreen;
+            border-radius: 30px;
+            position: relative;
+            left:550px;
+            text-align: center;
+
+        }  
+        #name1{
+            font-family: cursive;
+            font-size:30px;
+            text-align: center;
+        }
+        #name2{
+            font-family: cursive;
+            font-size:30px;
+            text-align: center;
+        }
+        #name3{
+            font-family: cursive;
+            font-size:30px;
+            text-align: center;
+        }
+        #Result{
+            font-family: cursive;
+            font-size:30px;
+            text-align: center;
+        }
+        #Click{
+            color:red;
+            font-size:30px;
+            font-family: cursive;
+             position: relative;
+             left:560px;
+        }
+        #Reset{
+            color:red;
+            font-size:30px;
+            font-family: cursive;
+            position: relative;
+            left:560px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <h1 id="name1">Check Point</h1>  <br>
+    <input type="number" id="Number_A" >
+    <h1 id="name2">Center Point</h1>  <br>
+    <input type="number" id="Number_B" >
+    <h1 id="name2">Last point</h1>  <br>
+    <input type="number" id="Number_C" >    <br>
+     <h1 id="Result">Result</h1>
+     <button id="Click">Click</button>
+     <input type="reset" id="Reset">
+     </div>
+    
+</body>
+<script>
+    var Result=document.getElementById("Result");
+    var Click=document.getElementById("Click");
+    var Reset=document.getElementById("Reset");
+    var onClick=function(){
+           var Number_A=parseInt(document.getElementById("Number_A").value);
+           var Number_B=parseInt(document.getElementById("Number_B").value);
+           var Number_C=parseInt(document.getElementById("Number_C").value);
+           var Number_A1=(document.getElementById("Number_A").value);
+           var Number_B1=(document.getElementById("Number_B").value);
+           var Number_C1=(document.getElementById("Number_C").value);
+           var Point_Average;
+           Point_Average=(Number_A+Number_B+Number_C)/3;
+            Result.textContent
+            if( Point_Average>=9.0){
+                Result.textContent="GOOD"
+            }
+            if( Point_Average<9.0 && Point_Average>=8){
+                Result.textContent="Great"
+            }
+            if( Point_Average<8.0 && Point_Average>=6){
+                Result.textContent="Rather"
+            }
+            if( Point_Average<6.0 && Point_Average>=4){
+                Result.textContent="average"
+            }
+            if( Point_Average<4 && Point_Average>=0){
+                Result.textContent="Weak"
+            }
+            if(Point_Average<0||Point_Average>10){
+                Result.textContent="Wrong point"
+            }
+            if(Number_A>10){
+                Result.textContent="Wrong value A";
+            }
+            if(Number_B>10){
+                Result.textContent="Wrong value B";
+            }
+            if(Number_C>10){
+                Result.textContent="Wrong value C";
+            }
+            if(Number_C>10 && Number_A>10){
+                Result.textContent="Wrong value C and A";
+            }
+            if(Number_B>10 && Number_A>10){
+                Result.textContent="Wrong value B and A";
+            }
+            if(Number_C>10 && Number_B>10){
+                Result.textContent="Wrong value C and B";
+            }
+            if(Number_C>10 && Number_B>10&& Number_A>10){
+                Result.textContent="Wrong value C and B and A";
+            }
+            ///
+            if(Number_A<0){
+                Result.textContent="Wrong value A";
+            }
+            if(Number_B<0){
+                Result.textContent="Wrong value B";
+            }
+            if(Number_C<0){
+                Result.textContent="Wrong value C";
+            }
+            if(Number_C<0 && Number_A<0){
+                Result.textContent="Wrong value C and A";
+            }
+            if(Number_B<0 && Number_A<0){
+                Result.textContent="Wrong value B and A";
+            }
+            if(Number_C<0 && Number_B<0){
+                Result.textContent="Wrong value C and B";
+            }
+            if(Number_C<0 && Number_B<0&& Number_A<0){
+                Result.textContent="Wrong value C and B and A";
+            }
+            if(Number_A1===""){
+                Result.textContent="Please fill value A";
+            }
+            if(Number_B1===""){
+                Result.textContent="Please fill value B";
+            }
+            if(Number_C1===""){
+                Result.textContent="Please fill value B";
+            }
+            if(Number_B1===""&&Number_A1===""){
+                Result.textContent="Please fill value B and A";
+            }
+            if(Number_C1===""&&Number_A1===""){
+                Result.textContent="Please fill value C and A";
+            }
+            if(Number_C1===""&&Number_B1===""){
+                Result.textContent="Please fill value B and C";
+            }
+            if(Number_C1===""&&Number_A1==="" &&Number_B1==="" ){
+                Result.textContent="Please fill value B and A and D";
+            }
+    }
+      Click.addEventListener("click",onClick);
+      //-----------------------------------------------------   
+</script>
+</html>

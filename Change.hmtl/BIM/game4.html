@@ -7,10 +7,9 @@
     <style>
         #ellpise{
             width:150px;
-            border: 2px solid rgb(8, 0, 0);
-            height:30px;
+            border: 2px solid red;
+            height:50px;
             border-radius: 50px;
-            background:rgb(243, 98, 212);
         }
         #ellpise1{
             width:40px;
@@ -19,8 +18,8 @@
             border-radius: 50px;
             background:red;
             position:relative;
-            top:5px;
-            left:-60px;
+            top:-5px;
+            left:-50px;
             
             
         }
@@ -32,17 +31,13 @@
 </body>
 <script>
     var ellpise1=document.getElementById("ellpise1");
-        ellpise1.style.position="relative";
-        ellpise1.style.left="-60px";
-        var onClick=function(){
-            ellpise1.style.left=(parseInt(ellpise1.style.left)-1)+"px";
-                   if(parseInt(ellpise1.style.left)=-150){
-                    ellpise1.style.left="-150px";
-                   } 
-           window.setInterval(onClick)
-        }  
-        ellpise1.addEventListener("click",onClick)
-   //------------------------------------------------------------------------
-      
-</script>
+    ellpise1.style.position="relative";
+    ellpise1.style.left="-50px" ;
+     var onClick=function(){
+       for (var i=0 ; i<-150;i++){
+        ellpise1.style.left=((parseInt(ellpise1.style.left)-1)+"px")
+       }
+     }
+      ellpise1.addEventListener("click",onClick)
+ </script>   
 </html>

@@ -4,75 +4,233 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+       body{
+          width:800px;
+          height: 400px;
+          background-image: url("https://media.istockphoto.com/photos/selfdriving-delivery-robot-concept-picture-id1160746084?b=1&k=6&m=1160746084&s=170667a&w=0&h=tHRs602NbfXf2KasvdE9PoVHyoJK2KC-0qhifl9YLSI=");
+       }
+      #variable1{
+       color:white;
+    }
+    #variable2{
+       color:white;
+    }
+    #variable3{
+       color:white;
+    }
+    #variable4{
+       color:white;
+    }
+    #variable5{
+       color:white;
+    }
+    div{
+       position: relative;
+       left:200px;
+       top:-275px;
+       border-radius: 20px;
+       border:10px solid black;
+       width:512px;
+    }
+    #button{
+       position: relative;
+       width:200px;
+       height:50px;
+       font-size: 40px;
+       color: red;
+       background:violet;
+       top:-800px;
+       left:900px;
+       border:3px solid red;
+       border-radius: 10px;
+    }
+    #point{
+      position: relative;
+       width:200px;
+       height:50px;
+       font-size: 50px;
+       color: rgb(245, 8, 8);
+       top:-800px;
+       left:980px;
+    }
+    #reset{
+      position: relative;
+       width:200px;
+       height:50px;
+       font-size: 40px;
+       color: red;
+       background:violet;
+       top:-800px;
+       left:900px;
+       border:3px solid red;
+       border-radius: 10px;
+    
+    }
+    </style>
 </head>
 <body>
+   <form action="">
     <h1 id="variable1">5</h1>
     <h1 id="variable2">6</h1>
-   
-    <img id="image1"src="https://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part1x1.jpg" alt="" width="300px" height="50px"> ; <br>
-    <img id="image2"src="https://demo.codegym.vn/8/puzzlegame/img/monkey_part2x1.jpg" alt="" width="300px" height="50px">; <br>
-    
-
+    <h1 id="variable3">7</h1>
+    <h1 id="variable4">7</h1>
+    <h1 id="variable5">6</h1>
+    <div>
+    <img id="image1"src="https://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part1x1.jpg" alt="" width="500px" height="100px"> <br>
+    <img id="image2"src="https://demo.codegym.vn/8/puzzlegame/img/monkey_part2x1.jpg" alt="" width="500px" height="100px"> <br>
+    <img id="image3"src="https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part3x1.jpg" alt="" width="500px" height="100px"> <br>
+    <img id="image4"src="https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part4x1.jpg" alt="" width="500px" height="100px"> <br>
+    <img id="image5"src="https://demo.codegym.vn/8/puzzlegame/img/monkey_part5x1.jpg" alt="" width="500px" height="100px"><br>
+   </div>
+    <button id="button">Resutl</button>
+    <h1 id="point">0</h1>
+    <input type="reset" value="reset" id="reset">
+   </form>
 </body>
 <script>
       var variable1=document.getElementById("variable1");
       var image1=document.getElementById("image1");
       var variable2=document.getElementById("variable2");
       var image2=document.getElementById("image2");
+      var variable3=document.getElementById("variable3");
+      var image3=document.getElementById("image3");
+      var variable4=document.getElementById("variable4");
+      var image4=document.getElementById("image4");
+      var variable5=document.getElementById("variable5");
+      var image5=document.getElementById("image5");
+      var point=document.getElementById("point");
+      var reset=document.getElementById("reset")
+      
       //---------------------------------function1--------------------------------
       var onClickNumber1=function(){
-        check();
+         check();
         variable1.textContent=parseFloat( variable1.textContent)+1;
         if(parseFloat( variable1.textContent)==6){
            image1.src="https://demo.codegym.vn/8/puzzlegame/img/monkey_part1x1.jpg";
-           return variable1.textContent;
         }
         if(parseFloat( variable1.textContent)==7){
            image1.src="https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part1x1.jpg";
-           return variable1.textContent;
         }
         if(parseFloat( variable1.textContent)>7){
             variable1.textContent=5
             image1.src="https://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part1x1.jpg";
-            return variable21.textContent;
         }
-       
-       
+        check();
       }
       image1.addEventListener("click",onClickNumber1)
-      //----------------------------------function2-------------------------------------
+      //----------------------------------function2--------------------------------------
+     
       var onClickNumber2=function(){
-        check();
+         check();
         variable2.textContent=parseFloat( variable2.textContent)+1;
         if(parseFloat( variable2.textContent)==6){
            image2.src="https://demo.codegym.vn/8/puzzlegame/img/monkey_part2x1.jpg"
-           return variable2.textContent;
         }
         if(parseFloat( variable2.textContent)==7){
            image2.src="https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part2x1.jpg";
-           return variable2.textContent;
-           
         }
         if(parseFloat( variable2.textContent)>7){
             variable2.textContent=5
             image2.src="https://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part2x1.jpg";
-            return variable2.textContent;
         }
-
+        check();
       }
-
       image2.addEventListener("click",onClickNumber2)
-      //--------------------------------------checkOut2----------------------------------------
+      //--------------------------------------------------------------------------------
+      //----------------------------------function3--------------------------------------
+  
+      var onClickNumber3=function(){
+         check();
+        variable3.textContent=parseFloat( variable3.textContent)+1;
+        if(parseFloat( variable3.textContent)==6){
+           image3.src="https://demo.codegym.vn/8/puzzlegame/img/monkey_part3x1.jpg";
+        }
+        if(parseFloat( variable3.textContent)==7){
+           image3.src="https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part3x1.jpg";
+        }
+        if(parseFloat( variable3.textContent)>7){
+            variable3.textContent=5
+            image3.src="https://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part3x1.jpg";
+        }
+       check(); 
+      }
+      image3.addEventListener("click",onClickNumber3)
+      //--------------------------------------------------------------------------------
+      //----------------------------------function4--------------------------------------
+     
+      var onClickNumber4=function(){
+         check();
+        variable4.textContent=parseFloat( variable4.textContent)+1;
+        if(parseFloat( variable4.textContent)==6){
+           image4.src="https://demo.codegym.vn/8/puzzlegame/img/monkey_part4x1.jpg";
+        }
+        if(parseFloat( variable4.textContent)==7){
+           image4.src="https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part4x1.jpg";
+        }
+        if(parseFloat( variable4.textContent)>7){
+            variable4.textContent=5
+            image4.src="https://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part4x1.jpg";
+        }
+         check();
+      }
+      image4.addEventListener("click",onClickNumber4)
+      //--------------------------------------------------------------------------------
+       //----------------------------------function5--------------------------------------
+       
+      var onClickNumber5=function(){
+         check();
+        variable5.textContent=parseFloat( variable5.textContent)+1;
+        if(parseFloat( variable5.textContent)==6){
+           image5.src="https://demo.codegym.vn/8/puzzlegame/img/monkey_part5x1.jpg";
+           
+        }
+        if(parseFloat( variable5.textContent)==7){
+           image5.src="https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part5x1.jpg";
+        }
+        if(parseFloat( variable5.textContent)>7){
+            variable5.textContent=5
+            image5.src="https://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part5x1.jpg";
+        }
+       check(); 
+      }
+      image5.addEventListener("click",onClickNumber5,)
+      //--------------------------------------------------------------------------------
       var check=function(){
-        if(parseFloat( variable2.textContent)===parseFloat( variable1.textContent) 
-        ){
+        if(
+        parseFloat( variable2.textContent)===parseFloat( variable1.textContent) &&
+        parseFloat( variable3.textContent)===parseFloat( variable2.textContent) &&
+        parseFloat( variable3.textContent)===parseFloat( variable4.textContent) &&
+        parseFloat( variable4.textContent)===parseFloat( variable5.textContent)                                                                                      
+        )
+        {
           image1.style.border="5px solid red";
           image2.style.border="5px solid red";
+          image3.style.border="5px solid red";
+          image4.style.border="5px solid red";
+          image5.style.border="5px solid red";
+          point.textContent=(parseFloat(point.textContent)+1);
+        
 
         } else{
-            image1.style.border="5px solid white";
-          image2.style.border="5px solid red";
+          image1.style.border="5px solid white";
+          image2.style.border="5px solid white";
+          image3.style.border="5px solid white";
+          image4.style.border="5px solid white";
+          image5.style.border="5px solid white";
+        
         }
       }
+
+   //-----------------------------------------calculartor -----------------------------------------
+   var clickReset=function(){
+      image1.src="https://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part1x1.jpg";
+      image2.src="https://demo.codegym.vn/8/puzzlegame/img/monkey_part2x1.jpg";
+      image3.src="https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part3x1.jpg";
+      image4.src="https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part4x1.jpg";
+      image5.src="https://demo.codegym.vn/8/puzzlegame/img/monkey_part5x1.jpg";
+   }
+   reset.addEventListener("click",clickReset)
+
 </script>
 </html>

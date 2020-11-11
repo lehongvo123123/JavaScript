@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+        position: relative;
+          width:180px;
+          height: 150px; 
+          border:2px  solid red;
+          left:500px;
+          top:200px;
+          background-image: url("https://cdn.pixabay.com/photo/2019/12/07/19/20/city-4679928__340.png");
+        }
+        #Check_So{
+            position: absolute;;
+            top:130px;
+            left:50px;
+            background: chartreuse;
+        }
+
+        #resutl{
+           text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+    <div>
+     Fill all time you used for phone call unit(second) Pls :   <br>
+    <input type="number" value="" id="first_Number"> <br>
+    <p id="resutl"></p>
+    <button id="Check_So">Check_So</button>
+    </div>
+</body>
+<script>
+   var resutl=document.getElementById("resutl");
+   var first_Number=document.getElementById("first_Number").value;
+   var Check_So=document.getElementById("Check_So");
+   var onClick=function(){
+         var first_Number1=parseInt(document.getElementById("first_Number").value);
+         var real_Number1=first_Number1*1650;
+                resutl.textContent=real_Number1+" Nghìn Đồng";
+                if(first_Number===""){
+                    resutl.textContent="Fill value a ,pls"
+                }
+                if(first_Number1<0){
+                    resutl.textContent="Wrong time"
+                }
+
+        
+   } 
+   Check_So.addEventListener("click",onClick)
+</script>
+</html>

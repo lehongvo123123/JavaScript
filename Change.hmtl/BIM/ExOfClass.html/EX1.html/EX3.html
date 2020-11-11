@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #Number{
+            width: 200px;
+            height: 50px;
+            font-size: 30px;
+            font-family:cursive;
+            border: 1px solid red;
+            background:yellowgreen;
+            border-radius: 30px;
+            position: relative;
+            left:550px;
+            text-align: center;
+        } 
+        #name1{
+            font-family: cursive;
+            font-size:30px;
+            text-align: center;
+        }
+        #Result{
+            font-family: cursive;
+            font-size:30px;
+            text-align: center;
+        }
+        #Click{
+            color:red;
+            font-size:30px;
+            font-family: cursive;
+             position: relative;
+             left:560px;
+        }
+        #Reset{
+            color:red;
+            font-size:30px;
+            font-family: cursive;
+            position: relative;
+            left:560px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="name1">Fill in number</h1>  <br>
+    <input type="number" id="Number" value="kkk">
+     <h1 id="Result">Result</h1>
+     <button id="Click">Click</button>
+     <input type="reset" id="Reset">
+     
+</body>
+<script>
+    var Result=document.getElementById("Result");
+    var Click=document.getElementById("Click");
+    var onClick=function(){
+           var Number=document.getElementById("Number").value;
+          if(Number>0){
+            Result.textContent="great than 0";
+          }else{
+            Result.textContent="less than 0"
+          }
+          if(Number===""){
+            Result.textContent="Please Flll in "
+          }
+       }
+      Click.addEventListener("click",onClick)
+</script>
+</html>

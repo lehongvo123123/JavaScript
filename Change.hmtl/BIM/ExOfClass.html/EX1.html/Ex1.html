@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+        position: relative;
+          width:180px;
+          height: 150px; 
+          border:2px  solid red;
+          left:500px;
+          top:200px;
+          background-image: url("https://cdn.pixabay.com/photo/2019/12/07/19/20/city-4679928__340.png");
+        }
+        #Check_So{
+            position: absolute;;
+            top:130px;
+            left:50px;
+            background: chartreuse;
+        }
+
+        #resutl{
+           text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+    <div>
+     Fill in value a :   <br>
+    <input type="number" value="" id="first_Number"> <br>
+     Fill in value b:   <br>
+    <input type="number" value="" id="second_Number"> <br>
+    <p id="resutl"></p>
+    <button id="Check_So">Check_So</button>
+    </div>
+</body>
+<script>
+   var resutl=document.getElementById("resutl");
+   var Check_So=document.getElementById("Check_So");
+   var onClick=function(){
+         var first_Number=document.getElementById("first_Number").value;
+         var second_Number=document.getElementById("second_Number").value;
+         if(first_Number%second_Number=="0"){
+                resutl.textContent="a Chia hết cho b ";  
+         }else{
+                resutl.textContent="a Không chia hết cho b";  
+         }
+         if(first_Number===""){
+              resutl.textContent="Plaese value a"
+         }
+         if(second_Number===""){
+              resutl.textContent="Plaese value b"
+         }
+         if(first_Number===""&&second_Number===""){
+            resutl.textContent="Plaese value b and a"
+         }
+   }
+   Check_So.addEventListener("click",onClick)
+</script>
+</html>
