@@ -5,44 +5,166 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body{
+            width:400px;
+            height:550px;
+            border:4px solid red;
+            background-image: url('');
+            position: relative;
+            left:440px;
+            top:20px;
+        }
+        div{
+            position: relative;
+            left:120px;
+            
+        }
         #ellpise{
             width:150px;
             border: 2px solid rgb(8, 0, 0);
-            height:30px;
+            height:40px;
             border-radius: 50px;
             background:rgb(243, 98, 212);
         }
         #ellpise1{
             width:40px;
-            border: 2px solid red;
+            border: 2px solid rgb(27, 4, 4);
             height:40px;
             border-radius: 50px;
-            background:red;
+            background:rgb(20, 1, 1);
             position:relative;
-            top:5px;
+            top:px;
             left:-60px;
-            
-            
+        }
+        #ellpise2{
+            width:150px;
+            border: 2px solid rgb(8, 0, 0);
+            height:40px;
+            border-radius: 50px;
+            background:rgb(243, 98, 212);
+        }
+        #ellpise3{
+            width:40px;
+            border: 2px solid rgb(27, 4, 4);
+            height:40px;
+            border-radius: 50px;
+            background:rgb(20, 1, 1);
+            position:relative;
+            top:px;
+            left:-60px;
+        }
+        #ellpise4{
+            width:150px;
+            border: 2px solid rgb(8, 0, 0);
+            height:40px;
+            border-radius: 50px;
+            background:rgb(243, 98, 212);
+        }
+        #ellpise5{
+            width:40px;
+            border: 2px solid rgb(27, 4, 4);
+            height:40px;
+            border-radius: 50px;
+            background:rgb(20, 1, 1);
+            position:relative;
+            top:px;
+            left:-60px;
+        }
+        h1{
+            font-size: 30px;
+            position: relative;
+            left:30px;
         }
     </style>
 </head>
 <body>
- <input type="button" value="" id="ellpise">
- <input type="button" value=""id="ellpise1">
+     <div>
+    <h1>Good</h1>
+ <input type="button" value="" id="ellpise" > 
+ <input type="button" value=""id="ellpise1">  <br> <br> <br> <br> <br>
+     <h1>Cheap</h1>
+ <input type="button" value="" id="ellpise2" >
+ <input type="button" value=""id="ellpise3">   <br> <br> <br> <br> <br>
+      <h1>Fast</h1>
+ <input type="button" value="" id="ellpise4" >
+ <input type="button" value=""id="ellpise5"> 
+    </div>
 </body>
 <script>
     var ellpise1=document.getElementById("ellpise1");
         ellpise1.style.position="relative";
         ellpise1.style.left="-60px";
-        var onClick=function(){
-            ellpise1.style.left=(parseInt(ellpise1.style.left)-1)+"px";
-                   if(parseInt(ellpise1.style.left)=-150){
-                    ellpise1.style.left="-150px";
-                   } 
-           window.setInterval(onClick)
-        }  
-        ellpise1.addEventListener("click",onClick)
+        //-------------------MainFunction-------------------
+        var onClick1=function(){            
+            if(parseInt(ellpise1.style.left)===-60){
+                ellpise1.style.left="-140px";
+                ellpise.style.background="red"
+                ellpise1.style.background="yellow"
+            }else{
+                ellpise1.style.left="-60px";
+            ellpise.style.background="blue";
+            ellpise1.style.background="pink";
+            }
+           check();
+         
+           }
+           ellpise1.addEventListener("click",onClick1)
    //------------------------------------------------------------------------
-      
+   var ellpise3=document.getElementById("ellpise3");
+        ellpise3.style.position="relative";
+        ellpise3.style.left="-60px";
+        //-------------------MainFunction-------------------
+        var onClick3=function(){   
+           
+            if(parseInt(ellpise3.style.left)===-60){
+                ellpise3.style.left="-140px";
+                ellpise2.style.background="red"
+                ellpise3.style.background="yellow"
+            }else{
+                ellpise3.style.left="-60px";
+            ellpise2.style.background="blue";
+            ellpise3.style.background="pink";
+            }
+            check();
+          
+           }
+           ellpise3.addEventListener("click",onClick3)
+   //------------------------------------------------------------------------
+   var ellpise5=document.getElementById("ellpise5");
+        ellpise5.style.position="relative";
+        ellpise5.style.left="-60px";
+        //-------------------MainFunction-------------------
+        var onClick5=function(){   
+            
+            if(parseInt(ellpise5.style.left)===-60){
+                ellpise5.style.left="-140px";
+                ellpise4.style.background="red"
+                ellpise5.style.background="yellow"
+            }else{
+                ellpise5.style.left="-60px";
+            ellpise4.style.background="blue";
+            ellpise5.style.background="pink";
+            }
+            check();
+         
+           }
+           ellpise5.addEventListener("click",onClick5)
+   //------------------------------------------------------------------------
+   //---------------------------------------------------------------------------
+      var check=function(){
+         if(parseFloat(ellpise1.style.left)===-140 && parseFloat(ellpise3.style.left)===-140  ){
+            ellpise5.style.left="-60px";
+            
+         }
+         if(parseFloat(ellpise1.style.left)===-140 && parseFloat(ellpise5.style.left)===-140  ){
+           
+            ellpise3.style.left="-60px";
+         }
+         if(parseFloat(ellpise3.style.left)===-140 && parseFloat(ellpise5.style.left)===-140  ){
+            ellpise1.style.left="-60px";
+            
+         }
+      }
+   
 </script>
 </html>
