@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 350px;
+            height: 360px;
+            border: 5px solid black;
+            position: relative;
+            left:450px;
+            top:150px;
+
+        }
+        input{
+            width:300px;
+             height: 50px;
+             border-radius: 10px;
+             border: 3px solid red;
+             font-size: 40px;
+             text-align: center;
+             font-family: cursive;
+             background:rgb(207, 250, 164);
+             position: relative;
+             left:15px;
+        }
+        button{
+            width:100px;
+             height: 50px;
+             border-radius: 10px;
+             border: 3px solid red;
+             font-size: 30px;
+             text-align: center;
+             font-family: cursive;
+             background:rgb(206, 152, 51);
+             position: relative;
+             top:30px;
+
+        }
+        #Resutl{
+            width:100px;
+             height: 50px;
+             border-radius: 10px;
+             font-size: 30px;
+             text-align: center;
+             font-family: cursive;
+             position: relative;
+             top:-35px;
+             left:150px;
+
+        }
+        h1{
+             position: relative;
+            left:15px;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+    <h1>Fill in value a of(square)</h1>
+    <input type="number" id="input"> <br>
+    <button id=button>Click</button>
+    <h1 id="Resutl">Resutl</h1>
+    </div>
+</body>
+<script>
+   
+    var button=document.getElementById("button");
+    var Resutl=document.getElementById("Resutl");
+    //---------------------------function1 click button----------------------------
+    var onClick_Button=function(){
+        var input_0=(document.getElementById("input").value);
+        var input_1=parseFloat(document.getElementById("input").value);
+        if(input_1>0 && input_1<=120){
+        if(input_1-parseInt(input_1)===0){
+            Resutl.textContent="Là Tuổi ";
+        }else{
+            Resutl.textContent="không phải là Tuổi ";
+        }
+    } else{
+        Resutl.textContent="không phải là Tuổi ";
+    }
+          //-----------------------------------------------   
+
+              if(input_1<0){
+                Resutl.textContent="Wrong value";
+              } 
+    } 
+    button.addEventListener("click",onClick_Button)
+</script>
+</html>

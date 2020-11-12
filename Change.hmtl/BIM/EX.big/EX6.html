@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 370px;
+            height: 500px;
+            border: 5px solid black;
+            position: relative;
+            left:450px;
+            top:50px;
+
+        }
+        input{
+            width:300px;
+             height: 50px;
+             border-radius: 10px;
+             border: 3px solid red;
+             font-size: 40px;
+             text-align: center;
+             font-family: cursive;
+             background:rgb(207, 250, 164);
+             position: relative;
+             left:15px;
+        }
+        input1{
+            width:300px;
+             height: 50px;
+             border-radius: 10px;
+             border: 3px solid red;
+             font-size: 40px;
+             text-align: center;
+             font-family: cursive;
+             background:rgb(207, 250, 164);
+             position: relative;
+             left:15px;
+        }
+        #button{
+            width:100px;
+             height: 50px;
+             border-radius: 10px;
+             border: 3px solid red;
+             font-size: 30px;
+             text-align: center;
+             font-family: cursive;
+             background:rgb(206, 152, 51);
+             position: relative;
+             top:30px;
+
+        }
+        #Resutl{
+            width:100px;
+             height: 50px;
+             border-radius: 10px;
+             font-size: 30px;
+             text-align: center;
+             font-family: cursive;
+             position: relative;
+             top:-35px;
+             left:150px;
+
+        }
+        h1{
+             position: relative;
+            left:1px;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+    <h1>Fill in a</h1>
+    <input type="number" id="input"> <br>
+    <h1>Fill in b</h1>
+    <input type="number" id="input1"> <br>
+    <button id=button>Click</button>
+    <h1 id="Resutl">Resutl</h1>
+    </div>
+</body>
+<script>
+   
+    var button=document.getElementById("button");
+    var Resutl=document.getElementById("Resutl");
+    //---------------------------function1 click button----------------------------
+    var onClick_Button=function(){
+        var input_01=(document.getElementById("input").value);
+        var input_11=parseFloat(document.getElementById("input").value);
+        var input_02=(document.getElementById("input1").value);
+        var input_12=parseFloat(document.getElementById("input1").value);
+                if(input_11===0){
+                    if(input_12===0){
+                        Resutl.textContent="VSN";
+                    }else{
+                        Resutl.textContent="VN";
+                    }
+                }else{
+                    if(input_12===0){
+                        Resutl.textContent="X=0";
+                    }else{
+                        Resutl.textContent="X= "+-input_11/input_12;
+                    }
+                }
+             
+              Resutl.textContent="S="+(degree_F)+" (m^2)";
+              if(input_01===""){
+                Resutl.textContent="fill value a";
+              }
+              if(input_02===""){
+                Resutl.textContent="fill value b";
+              }
+              if(input_01===""&&input_02===""){
+                Resutl.textContent="fill value a,b";
+              }
+              if(input_11<0){
+                Resutl.textContent="Wrong value a";
+              } 
+              if(input_12<0){
+                Resutl.textContent="Wrong value b";
+              } 
+              if(input_11<0&&input_12<0){
+                Resutl.textContent="Wrong value a,b";
+              } 
+    } 
+    button.addEventListener("click",onClick_Button)
+</script>
+</html>
