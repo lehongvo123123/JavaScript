@@ -10,8 +10,12 @@
 <script>
     var input_character=""
     do{
-        input_character=parseInt(prompt("Please fill in value"))
-    } while(input_character>1 && input_character<10)
+        input_character=(prompt("Please fill in value to 1 go 10"))
+        var input_character1=parseFloat(input_character);
+        
+            input_character=parseInt(prompt("Please fill in value to 1 go 10"))
+        
+    } while(input_character1>=1 && input_character1<=10)
     alert("show the number you have been fill in :"+input_character)
 </script>
 </html>

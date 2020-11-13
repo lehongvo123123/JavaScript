@@ -6,7 +6,7 @@
     <title>Document</title>
     <style>
         body{
-
+            background:violet;
         }
         #main{
             text-align: center;
@@ -37,6 +37,7 @@
             position: relative;
             left:550px;
             top:200px;
+            background-image:url()
         }
         
         </style>
@@ -50,7 +51,8 @@
     var  yesButton=document.getElementById("yesButton");
      //-------when click yes--------------------------
      var onClickYes=function(){
-         alert("You so cool")
+         alert("You so cool");
+         bo
      }
      yesButton.addEventListener("click",onClickYes);
      //------When click yes --------------------------
@@ -60,8 +62,8 @@
     
     //function move no box when touch box//
     var onClickNo=function(){
-        var a=(Math.round(Math.random()*window.innerWidth));
-     var b=(Math.round(Math.random()*window.innerHeight));
+        var a=(Math.round(Math.random()*window.innerWidth)-85);
+     var b=(Math.round(Math.random()*window.innerHeight-100));
         noButton.style.top=b+"px"; 
         noButton.style.left=a+"px"; 
         if(parseFloat(noButton.style.left)>=1200){
