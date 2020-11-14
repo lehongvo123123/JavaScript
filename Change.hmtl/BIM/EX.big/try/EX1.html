@@ -4,88 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        #ellpise{
-            width:150px;
-            border: 2px solid rgb(8, 0, 0);
-            height:30px;
-            border-radius: 50px;
-            background:rgb(243, 98, 212);
-        }
-        #ellpise1{
-            width:40px;
-            border: 2px solid rgb(27, 4, 4);
-            height:40px;
-            border-radius: 50px;
-            background:rgb(20, 1, 1);
-            position:relative;
-            top:5px;
-            left:-60px;
-            
-            
-        }
-    </style>
 </head>
 <body>
- <input type="button" value="" id="ellpise" >
- <input type="button" value=""id="ellpise1" onclick="function1()">
+<input type="text" name="" id="fill_Number">
+<button id="button">Click</button>
+<h1 id="writing">Show Number</h1>
 </body>
 <script>
-    var ellpise1=document.getElementById("ellpise1");
-        ellpise1.style.position="relative";
-        var count=0;
-        //-------------------MainFunction-------------------
-     
-    //    var onClick=function(){
-       
-    //     ellpise1.style.left="-60px";
-    //         onClick1();
-    //         var onClick3=function(){
-    //            onClick2();
-    //         }
-    //         ellpise1.addEventListener("click",onClick3);
-
-    //     }
-    //     ellpise1.addEventListener("click",onClick);
-        // window.setInterval(onClick);
-       
-       
-       
-        //-------------------function 1-------------------
-
-     
-
-           function function1(){
-            let ellpise1=document.getElementById("ellpise1");
-            ellpise1.style.position="relative";
-            if(  ellpise1.style.left="-150px"){
-         
-            ellpise1.style.left="-150px";
-            ellpise.style.background="red"
-            ellpise1.style.background="yellow"
-           }
-
-        //----------------fuction2-----------------------
-
-        var onClick2=function(){
-            console.log(2);
-            ellpise1.style.left="-50px";
-            ellpise.style.background="blue"
-            ellpise1.style.background="pink"
-           }
-
-           function function2(){
-            let ellpise1=document.getElementById("ellpise1");
-        ellpise1.style.position="relative";
-            console.log(2);
-            ellpise1.style.left="-50px";
-            ellpise.style.background="blue"
-            ellpise1.style.background="pink"
-           }  
-
-        //----------------OnFunction()------------------------   
-        
-   //------------------------------------------------------------------------
-      
+    var button=document.getElementById("button");
+    var writing=document.getElementById("writing");
+    var onClick=function(){
+         var   fill_Number=parseInt(document.getElementById("fill_Number").value)
+        var formTable;
+        formTable="<table border='1 solid red' width='1600'>";
+        for (var i = 1  ; i <=fill_Number ;i++){
+                formTable+="<tr>"
+            for(var j = 2 ; j <= fill_Number ;j++){
+              formTable+="<td>"+j+" * "+i+"="+j*i+"</td>"
+              }
+              formTable+="<tr>"
+     }
+     formTable+="<table>"
+        document.body.style.backgroundColor="red";
+        document.write(formTable);
+    }
+    button.addEventListener("click",onClick)
 </script>
 </html>

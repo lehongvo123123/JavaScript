@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="number">
+    <button id="button">Click</button>
+    <h1 id="show">show</h1>
+</body>
+<script>
+       var button=document.getElementById("button");
+       var show=document.getElementById("show");
+      
+       //-----------check Snt-------------------
+          var check_Snt=function(number){
+            
+            var test1=true;
+
+            if(number<2){
+                  test1=false;
+            }
+            if(number==2){
+                 test1=true;
+            }
+            for ( var i=2 ; i<number-1;i++){
+                if(number % i === 0){
+                    test1=false;
+                    break;
+                }else{
+                    test1=true;
+                }
+            }
+          return test1;
+          } 
+
+          button.addEventListener("click",check_Snt);
+    //------------print snt-----------
+    var print_snt=function(){
+        var test2="";
+        var dem=0;
+        var number1=20000;
+        var number2=parseInt(document.getElementById("number").value);
+        for (var i = 1 ; i <= number1 ; i++){
+                if(check_Snt(i)){
+                      dem=dem+1;
+                      test2+=i+"<br>";
+                      if(dem==number2){
+                          break;
+                      }
+                }
+        }
+        show.innerHTML=test2;
+    }
+    button.addEventListener("click",print_snt)
+</script>
+</html>

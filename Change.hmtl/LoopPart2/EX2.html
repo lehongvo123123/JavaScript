@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="fill_in_snt">
+     <h1 id="show_Nt">Show so nguyen to</h1>
+     <button id="button" >Click hear</button>
+</body>
+<script>
+    var show_Nt=document.getElementById("show_Nt");
+    var button=document.getElementById("button")
+    var onClick=function(){
+        var test="";
+         var fill_in_snt=parseInt(document.getElementById("fill_in_snt").value);
+         if(fill_in_snt%4===0){
+             if(fill_in_snt%100===0){
+                 if(fill_in_snt%400==0){
+                    alert("right") 
+                 }else{
+                    alert("wrong")  
+                 }
+             }else{
+                alert("right") 
+             }
+         }else{
+            alert("wrong") 
+         }
+    }
+    button.addEventListener("click",onClick)
+</script>
+</html>
